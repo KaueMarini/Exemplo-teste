@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Teste Interativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #bb86fc;
+            --primary-variant-color: #3700b3;
+            --secondary-color: #03dac6;
+            --on-surface-color: #ffffff;
+            --on-primary-color: #000000;
+            --border-radius: 8px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--on-surface-color);
+            line-height: 1.6;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        main {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h2 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .interactive-zone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .cool-button {
+            background-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: var(--on-primary-color);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .cool-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(187, 134, 252, 0.4);
+        }
+
+        .form-test {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-group input, .form-group select {
+            padding: 10px;
+            border-radius: var(--border-radius);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background-color: var(--bg-color);
+            color: var(--on-surface-color);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .form-test {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+            .full-width {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Página de Teste Interativa</h1>
+            <p>Um ambiente robusto para testar renderização, scripts e responsividade.</p>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Zona Interativa</h2>
+                <div class="interactive-zone">
+                    <p>Clique no botão abaixo para uma surpresa!</p>
+                    <button class="cool-button" id="confettiButton">Disparar Confete!</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Formulário de Teste</h2>
+                <form class="form-test" id="testForm" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Data de Nascimento:</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                     <div class="form-group">
+                        <label for="options">Escolha uma opção:</label>
+                        <select id="options" name="options">
+                            <option value="1">Opção 1</option>
+                            <option value="2">Opção 2</option>
+                            <option value="3">Opção 3</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="cool-button">Enviar Formulário</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>Gerado por IA em &copy; 2024. Use à vontade para seus testes.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('confettiButton').addEventListener('click', () => {
+            const confettiCount = 100;
+            const fragment = document.createDocumentFragment();
+
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.top = `${Math.random() * -100}vh`;
+                confetti.style.width = `${Math.random() * 15 + 5}px`;
+                confetti.style.height = confetti.style.width;
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.opacity = '0.8';
+                confetti.style.borderRadius = '50%';
+                confetti.style.animation = `fall ${Math.random() * 4 + 3}s linear ${Math.random() * 2}s forwards`;
+                fragment.appendChild(confetti);
+            }
+
+            document.body.appendChild(fragment);
+
+            // Limpa os confetes depois da animação
+            setTimeout(() => {
+                document.querySelectorAll('div[style*="animation"]').forEach(el => {
+                    if (el.style.animation.includes('fall')) el.remove();
+                });
+            }, 7000);
+        });
+
+        // Adiciona a keyframe da animação de queda
+        const styleSheet = document.createElement("style");
+        styleSheet.innerText = `
+            @keyframes fall {
+                to {
+                    transform: translateY(200vh) rotate(${Math.random() * 720}deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(styleSheet);
+        
+        // Simples feedback no formulário
+        document.getElementById('testForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Formulário enviado com sucesso! (Ação de teste)');
+        });
+
+    </script>
+</body>
+</html>
