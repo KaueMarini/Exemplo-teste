@@ -1,112 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Kaue Marini</title>
+    <title>Meu Projeto Incrível</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>Portfólio de Kaue Nebot Marini</h1>
-        <p>Desenvolvedor Web e Entusiasta de Tecnologia</p>
-        
-        <nav>
-            <p>Navegue pelas seções:</p>
-            <ul>
-                <li><a href="#sobre">Sobre Mim</a></li>
-                <li><a href="#projetos">Meus Projetos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container">
+            <h1>Meu Projeto Incrível</h1>
+            <p>Uma breve descrição sobre o que este site faz.</p>
+            <a href="#features" class="cta-button">Saiba Mais</a>
+        </div>
     </header>
 
-    <hr>
-
-    <main>
-
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>
-                Olá! Eu sou Kaue, um desenvolvedor apaixonado por criar soluções web que sejam funcionais e acessíveis. Tenho experiência em <strong>desenvolvimento front-end</strong> e estou sempre buscando aprender novas tecnologias para aprimorar minhas habilidades.
-            </p>
-            <p>
-                Este portfólio foi criado utilizando <em>apenas HTML</em> para demonstrar a estrutura fundamental de uma página web.
-            </p>
-        </section>
-
-        <hr>
-
-        <section id="projetos">
-            <h2>Meus Projetos</h2>
+    <main class="site-content" id="features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
             
-            <article>
-                <h3>Projeto 1: Site Institucional</h3>
-                <img src="https://via.placeholder.com/300x150?text=Site+Institucional" alt="Imagem do projeto Site Institucional.">
-                <p>Desenvolvimento de um site completo para a empresa "Tech Solutions", focado em usabilidade e performance. O projeto foi construído do zero, passando por todas as etapas de planejamento e execução.</p>
-                <a href="#">Ver projeto (link de exemplo)</a>
-            </article>
-            
-            <br>
-            
-            <article>
-                <h3>Projeto 2: Blog Pessoal</h3>
-                <img src="https://via.placeholder.com/300x150?text=Blog+Pessoal" alt="Imagem do projeto Blog Pessoal.">
-                <p>Criação de um blog com tema de tecnologia, utilizando um layout simples e focado no conteúdo. O objetivo era criar uma plataforma leve para compartilhar artigos e tutoriais.</p>
-                <a href="#">Ver projeto (link de exemplo)</a>
-            </article>
-
-        </section>
-
-        <hr>
-
-        <section id="habilidades">
-            <h2>Habilidades Técnicas</h2>
-            <ul>
-                <li>HTML5 (Avançado)</li>
-                <li>CSS3 (Intermediário)</li>
-                <li>JavaScript (Básico)</li>
-                <li>Controle de Versão com Git</li>
-                <li>Design Responsivo</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section id="contato">
-            <h2>Entre em Contato</h2>
-            <p>Tem alguma pergunta ou proposta? Preencha o formulário abaixo.</p>
-            
-            <form action="#" method="post">
-                <div>
-                    <label for="nome">Seu Nome:</label><br>
-                    <input type="text" id="nome" name="nome" required>
+            <div class="features-grid">
+                <div class="card">
+                    <h3>Funcionalidade 1</h3>
+                    <p>Descrição detalhada da primeira funcionalidade, destacando seus benefícios e como ela ajuda o usuário.</p>
                 </div>
-                <br>
-                <div>
-                    <label for="email">Seu Email:</label><br>
-                    <input type="email" id="email" name="email" required>
+                <div class="card">
+                    <h3>Funcionalidade 2</h3>
+                    <p>Descrição detalhada da segunda funcionalidade, destacando seus benefícios e como ela ajuda o usuário.</p>
                 </div>
-                <br>
-                <div>
-                    <label for="mensagem">Sua Mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem" rows="5" cols="40" required></textarea>
+                <div class="card">
+                    <h3>Funcionalidade 3</h3>
+                    <p>Descrição detalhada da terceira funcionalidade, destacando seus benefícios e como ela ajuda o usuário.</p>
                 </div>
-                <br>
-                <div>
-                    <button type="submit">Enviar Mensagem</button>
-                </div>
-            </form>
-        </section>
-
+            </div>
+        </div>
     </main>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2025 João da Silva. Todos os direitos reservados.</p>
-        <p>Criado como um exemplo de HTML puro.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Seu Nome ou Nome da Empresa. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
