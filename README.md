@@ -17,3 +17,6 @@ Neste projeto, configuramos um fluxo de CD utilizando duas ferramentas poderosas
 GitHub Actions: É a plataforma de automação integrada ao GitHub. Ela nos permite criar "fluxos de trabalho" (workflows) que são acionados por eventos no nosso repositório, como um push para uma branch específica.
 
 Azure Static Web Apps: É um serviço da Microsoft Azure otimizado para hospedar sites estáticos (HTML, CSS, JavaScript e frameworks como React, Angular, Vue, etc.). Ele se integra perfeitamente com o GitHub Actions para automatizar o processo de build e publicação do site.
+
+
+Acesse o Site : https://gray-cliff-0caf30610.1.azurestaticapps.net
