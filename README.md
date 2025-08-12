@@ -1,4 +1,4 @@
-Teste Exemplo Aula de Engenharia de Software 
+Este é um projeto de exemplo para a disciplina de Engenharia de Software que demonstra o uso de branches do Git e a implementação de um fluxo de Entrega Contínua (Continuous Delivery) para hospedar um site estático no Azure Static Web Apps.
 
 Em desenvolvimento de software, um branch (ramificação), dentro de sistemas de controle de versão como Git, é uma cópia independente do código-fonte principal
 
